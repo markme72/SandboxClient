@@ -17,7 +17,7 @@ public class SandboxClient {
 	public static void main(String [] arg) {
 		SandboxClient sandboxClient = new SandboxClient();
 		try {
-			Socket serverSocket = new Socket("localhost", 9291);
+			Socket serverSocket = new Socket("localhost", 9292);
 			// setup the JSON streams to be used later.
 			final JSONInputStream inFromServer = new JSONInputStream(
 					serverSocket.getInputStream());

@@ -1,6 +1,7 @@
 .classpath
 .DS_Store
 bin/sandox/Sandbox.class
+bin/SandboxClient.class
 bin/sandox/UserBean.class
 .project
 .settings/org.eclipse.jdt.core.prefs
