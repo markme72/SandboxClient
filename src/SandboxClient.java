@@ -15,7 +15,9 @@ public class SandboxClient {
 	private UserBean aUser = new UserBean();
 	
 	public static void main(String [] arg) {
-		SandboxClient sandboxClient = new SandboxClient();
+		final SandboxClient sandboxClient = new SandboxClient();
+		new Thread(new Runnable() {
+			public void run() {
 		try {
 			Socket serverSocket = new Socket("localhost", 9292);
 			// setup the JSON streams to be used later.
@@ -37,7 +39,8 @@ public class SandboxClient {
 			e.printStackTrace();
 
 		}
-
+		}
+		}).start();
 	}
 
 	private void menu(JSONOutputStream outToServer, JSONInputStream inFromServer, Socket serverSocket) throws JSONException, IOException {
